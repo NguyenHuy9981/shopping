@@ -60,5 +60,18 @@ class HomeController extends Controller
     }
 
 
+    function search(Request $request) {
+        $searchValue = $request['search'];
+        $products = Product::where('name', 'LIKE', '%'.$searchValue.'%')->paginate();
+        
+        
+
+        $sliders = Slider::all();
+        $menus = Menu::where('parent_id', 0)->get();
+        $categories = Category::where('parent_id', 0)->get();
+        return view('search', compact('sliders','products','menus', 'categories'));
+    }
+
+
     
 }

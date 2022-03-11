@@ -27,3 +27,5 @@ Route::get('/updateCart', 'CartController@updateCart')->name('updateCart');
 
 Route::get('/deleteCart', 'CartController@deleteCart')->name('deleteCart');
 
+Route::get('/search', 'HomeController@search')->name('search');
+
