@@ -54,7 +54,6 @@
                         @else
                         <div class="col-sm-12 search-bot">
                         <h4>Không có sản phẩm phù hợp với kết quả "{{ request()->input('search') }}"</h4>
-
                             <h5>Để tìm được kết quả chính xác hơn, bạn vui lòng:</h5>
                             <ul>
                                 <li>-Kiểm tra lỗi chính tả của từ khóa đã nhập</li>
@@ -62,9 +61,10 @@
                                 <li>-Thử lại bằng những từ khóa tổng quát hơn</li>
                                 <li>-Thử lại bằng những từ khóa ngắn gọn hơn</li>
                             </ul>
-
-                        @endif
+                            
                         </div>
+                        @endif
+                        
 					</div><!--features_items-->
 					
 					<div class="category-tab"><!--category-tab-->
