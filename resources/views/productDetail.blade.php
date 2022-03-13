@@ -15,8 +15,8 @@
 
 
 @section('content')
-    
-<div class="product-details"><!--product-details-->
+<div class="col-sm-9 padding-right">
+	<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
 								<img src="{{ config('app.base_url') . $product->feature_image }}" alt="" />
@@ -45,8 +45,8 @@
 								  </a>
 								  @endif
 							</div>
-
 						</div>
+
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
 								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
@@ -76,11 +76,33 @@
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
 						</div>
-</div><!--/product-details-->
+	</div><!--/product-details-->
+
+
+	<div class="category-tab shop-details-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li><a href="#details" data-toggle="tab">Mô tả</a></li>
+							</ul>
+						</div>
+						<div class="">
+
+							
+							<div class="margin-left">
+								<div class="col-sm-12">
+									{!! $product->content !!}
+								</div>
+							</div>
+							
+						</div>
+	</div><!--/category-tab-->
+</div>					
 	
 @endsection
 
 @section('js')
+  <!-- import thư viện JS Sweetalert2 -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- import thư viện JS -->
   <script src="{{ asset('public\home\home.js') }}"></script>
 @endsection

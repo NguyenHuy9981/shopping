@@ -13,7 +13,7 @@
 							<td class="image">Sản phẩm</td>
 							<td class="description"></td>
 							<td class="price">Giá</td>
-							<td class="quantity">số lượng</td>
+							<td class="quantity">Số lượng</td>
 							<td class="total">Thành tiền</td>
 							<td></td>
 						</tr>

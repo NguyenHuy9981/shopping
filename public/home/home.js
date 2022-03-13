@@ -7,7 +7,10 @@ function add_toCart(event) {
         url: Url,
         success:function(data){
            if(data.code == 'success') {
-               alert('Thêm sản phẩm vào giỏ hàng thành công')
+               
+            Swal.fire(
+               'Sản phẩm đã được thêm vào giỏ hàng',
+            )
            }
         }
      });
@@ -25,7 +28,10 @@ function add_toDetail(event) {
         data:{quantity:quantity},
         success:function(data){
            if(data.code == 'success') {
-               alert('Thêm sản phẩm vào giỏ hàng thành công')
+
+            Swal.fire(
+               'Sản phẩm đã được thêm vào giỏ hàng',
+            )
            }
         }
      });

@@ -7,6 +7,7 @@ use App\Menu;
 use App\Slider;
 use App\Product;
 use App\Setting;
+use App\Tag;
 use Dotenv\Result\Success;
 use Illuminate\Http\Request;
 
@@ -16,10 +17,11 @@ class HomeController extends Controller
 
     function index() {
         $sliders = Slider::all();
-        $products = Product::all();
+        $products = Product::oldest()->paginate(6);
         $menus = Menu::where('parent_id', 0)->get();
         $categories = Category::where('parent_id', 0)->get();
-        return view('home', compact('sliders','products','menus', 'categories'));
+        $tags =Tag::all();
+        return view('home', compact('sliders','products','menus', 'categories', 'tags'));
     }
 
     function setupCat($id) {
@@ -44,10 +46,12 @@ class HomeController extends Controller
             $products = Product::where('category_id', $id)->paginate(12);
         }
 
+
+        $categoryOfPage = Category::find($id);
         $sliders = Slider::all();
         $menus = Menu::where('parent_id', 0)->get();
         $categories = Category::where('parent_id', 0)->get();
-        return view('list', compact('sliders','products','menus', 'categories'));
+        return view('list', compact('sliders','products','menus', 'categories', 'categoryOfPage'));
     }
 
 

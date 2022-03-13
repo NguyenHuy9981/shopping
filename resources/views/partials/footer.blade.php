@@ -56,7 +56,7 @@
 						<div class="single-widget">
 							<h2>{{ config_web('footer') }}</h2>
 							<form action="#" class="searchform">
-								<input type="text" placeholder="Địa chỉ email của bạn"/>
+								<input type="text" placeholder="Địa chỉ email"/>
 								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
 								<p>{{ config_web('footer1') }}</p>
 								<p>{{ config_web('footer2') }}</p>

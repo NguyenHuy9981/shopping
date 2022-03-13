@@ -22,7 +22,7 @@
     
 <div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Features Items</h2>
+						<h2 class="title text-center">{{ $categoryOfPage->name }}</h2>
 						@foreach($products as $product)
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
@@ -43,7 +43,7 @@
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-										<li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<!-- <li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
 										<li><a href="{{ route('product.detail', $product->id) }}"><i class="fa fa-plus-square"></i>Xem sản phẩm</a></li>
 									</ul>
 								</div>
@@ -59,6 +59,8 @@
 @endsection
 
 @section('js')
+  <!-- import thư viện JS Sweetalert2 -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- import thư viện JS -->
   <script src="{{ asset('public\home\home.js') }}"></script>
 @endsection

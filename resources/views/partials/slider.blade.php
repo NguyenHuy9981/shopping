@@ -22,7 +22,7 @@
 									<h1><span>Shopping4</span></h1>
 									<h2>{{ $slider->name }}</h2>
 									<p>{{ $slider->description }}</p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<button type="button" class="btn btn-default get">Xem ngay</button>
 								</div>
 								<div class="col-sm-6">
 									<img src="{{ $baseUrl . $slider->image_path }}" class="girl img-responsive" alt="" />
